@@ -19,7 +19,7 @@ namespace DiscordRichPresenceForVisualStudio.WindowsUI
     /// </summary>
     public partial class SettingsWindowControl : UserControl
     {
-        SettingsViewModel viewModel;
+        readonly SettingsViewModel viewModel;
 
         public SettingsWindowControl()
         {
