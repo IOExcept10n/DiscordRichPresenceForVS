@@ -1,0 +1,110 @@
+{
+  "C++": {
+    "Extensions": [ "h", "c", "cc", "hh", "cpp", "ipp", "inl", "c++", "h++", "hpp" ],
+    "ImageKey": "cpp"
+  },
+  "GO": {
+    "Extensions": [ "go" ],
+    "ImageKey": "go"
+  },
+  "PHP": {
+    "Extensions": [ "php" ],
+    "ImageKey": "php"
+  },
+  "Ruby": {
+    "Extensions": [ "rb", "rbw" ],
+    "ImageKey": "ruby"
+  },
+  "C#": {
+    "Extensions": [ "cs" ],
+    "ImageKey": "csharp"
+  },
+  "F#": {
+    "Extensions": [ "fs", "fsi", "fsx", "fsscript" ],
+    "ImageKey": "fsharp"
+  },
+  "TypeScript": {
+    "Extensions": [ "ts" ],
+    "ImageKey": "typescript"
+  },
+  "Java": {
+    "Extensions": [ "class", "java" ],
+    "ImageKey": "java"
+  },
+  "$text": {
+    "Extensions": [ "txt" ],
+    "ImageKey": "text"
+  },
+  "JSON": {
+    "Extensions": [ "json" ],
+    "ImageKey": "json"
+  },
+  "Python": {
+    "Extensions": [ "py", "pyw", "pyi", "pyx" ],
+    "ImageKey": "python"
+  },
+  "CSS": {
+    "Extensions": [ "css" ],
+    "ImageKey": "css"
+  },
+  "SASS": {
+    "Extensions": [ "scss", "sass" ],
+    "ImageKey": "sass"
+  },
+  "LESS": {
+    "Extensions": [ "less" ],
+    "ImageKey": "less"
+  },
+  "HTML": {
+    "Extensions": [ "html" ],
+    "ImageKey": "html"
+  },
+  "JavaScript": {
+    "Extensions": [ "js" ],
+    "ImageKey": "javascript"
+  },
+  "CMake": {
+    "Extensions": [ "cmakelists.txt", "cmakecache.txt" ],
+    "ImageKey": "cmake"
+  },
+  "Markdown": {
+    "Extensions": [ "md", "markdown" ],
+    "ImageKey": "markdown"
+  },
+  "XML": {
+    "Extensions": [ "xml" ],
+    "ImageKey": "xml"
+  },
+  "XAML": {
+    "Extensions": [ "xaml" ],
+    "ImageKey": "xaml"
+  },
+  "CSHtml": {
+    "Extensions": [ "cshtml", "razor" ],
+    "ImageKey": "cshtml"
+  },
+  "Rust": {
+    "Extensions": [ "rs" ],
+    "ImageKey": "rust"
+  },
+  "Lua": {
+    "Extensions": [ "lua" ],
+    "ImageKey": "lua"
+  },
+  "Visual Basic": {
+    "Extensions": [ "bas", "cls", "frm", "vbp", "vbg" ],
+    "ImageKey": "vb"
+  },
+  "$log": {
+    "Extensions": [ "log" ],
+    "ImageKey": "log"
+  },
+  "$vsct": {
+    "Extensions": [ "vsct" ],
+    "ImageKey": "vsct"
+  },
+  "Gitignore": {
+    "Extensions": [ "gitignore" ],
+    "ImageKey": "git"
+  }
+}

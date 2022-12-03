@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<Extern href="vsshlids.h" />
+	<Extern href="stdidcmd.h" />
+	<Commands package="guidDiscordRichPresenceForVisualStudioPackage">
+		<Menus>
+			<Menu guid="guidDiscordRichPresenceForVisualStudioPackageCmdSet" id="SubMenu" priority="0x700" type="Menu">
+				<Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
+				<Strings>
+					<ButtonText>Discord Rich Presence</ButtonText>
+				</Strings>
+			</Menu>
+		</Menus>
+		<Groups>
+			<Group guid="guidDiscordRichPresenceForVisualStudioPackageCmdSet" id="SubMenuGroup" priority="0x0000">
+				<Parent guid="guidDiscordRichPresenceForVisualStudioPackageCmdSet" id="SubMenu" />
+			</Group>
+		</Groups>
+		<Buttons>
+			<Button guid="guidDiscordRichPresenceForVisualStudioPackageCmdSet" id="cmdidSettingsWindowCommand" priority="0x0000" type="Button">
+				<Parent guid="guidDiscordRichPresenceForVisualStudioPackageCmdSet" id="SubMenuGroup" />
+				<Icon guid="guidDiscordRichPresenceForVisualStudioPackageImages" id="settingsIcon"/>
+				<Strings>
+					<ButtonText>Settings...</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+		<Bitmaps>
+			<Bitmap guid="guidDiscordRichPresenceForVisualStudioPackageImages" href="Resources\SettingsIcon.png" usedList="settingsIcon"/>
+		</Bitmaps>
+	</Commands>
+	<Symbols>
+		<GuidSymbol name="guidDiscordRichPresenceForVisualStudioPackage" value="{1cfeb6df-f540-4313-933e-6436c042e5ef}" />
+		<GuidSymbol name="guidDiscordRichPresenceForVisualStudioPackageCmdSet" value="{89a99f09-8b4e-4ab6-9652-e093fc82a47a}">
+			<IDSymbol value="0x0100" name="SubMenu" />
+			<IDSymbol value="0x0101" name="SubMenuGroup" />
+			<IDSymbol value="0x1110" name="cmdidSettingsWindowCommand" />
+		</GuidSymbol>
+		<GuidSymbol name="guidDiscordRichPresenceForVisualStudioPackageImages" value="{5935FB01-B77C-4DE0-A47B-C32DF663EF18}">
+			<IDSymbol value="1" name="settingsIcon"/>
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
