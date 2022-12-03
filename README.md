@@ -38,7 +38,7 @@ the presence will be shown on your language*
 you can load here any text file contains gitignore-like syntax
 to filter files and folders you don't want to show them to anyone.
 If you open file that is blacklist, 
-presence will be disabled until you're in this file.
+presence will be disabled while you're in this file.
 By default, file dialog filter files ends with ".ignore"
 to show that files are like gitignore files.
 
