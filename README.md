@@ -9,16 +9,16 @@ If you have any questions about extension, you can open an issue or write me
 ## How to start
 Just install the extension and open any solution, and your activity will be shown in your discord profile
 
-[Picture 1]
+![Picture 1](https://user-images.githubusercontent.com/56886020/205453588-f7ee0934-a730-4429-adb7-e7afafe7ed25.png)
 
-[Picture 2]
+![Picture 2](https://user-images.githubusercontent.com/56886020/205453606-ca717637-8409-436c-8e50-94c61d029899.png)
 
 ## Settings
 
 You can also set up the presence in the settings window </br> 
 (Extensions -> Discord Rich Presence -> Settings)
 
-[Picture 3]
+![Picture 3](https://user-images.githubusercontent.com/56886020/205453626-fb3ac338-29e6-4067-9d70-c6401076f4b6.png)
 
 The window contain following preferences: </br>
 * **Is Presence Enabled** – globally enables or disables presence
