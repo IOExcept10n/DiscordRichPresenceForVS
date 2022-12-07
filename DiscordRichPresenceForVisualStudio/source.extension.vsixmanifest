@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" ?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="DiscordRichPresenceForVisualStudio.a13b5f7a-bec2-42df-a1f3-0f5841b896a9" Version="1.0" Language="en-US" Publisher="Ivan Olyanishin" />
+        <Identity Id="DiscordRichPresenceForVisualStudio.a13b5f7a-bec2-42df-a1f3-0f5841b896a9" Version="1.0.1" Language="en-US" Publisher="IOExcept10n" />
         <DisplayName>Discord RPC For Visual Studio</DisplayName>
         <Description xml:space="preserve">Discord Rich Presence client for Visual Studio application.</Description>
         <Icon>Resources\Icon.ico</Icon>

@@ -69,6 +69,7 @@ namespace DiscordRichPresenceForVisualStudio
         private Timestamps currentTimestamps;
         private Assets assets;
         private DateTime startupTime;
+        private bool closing = false;
 
         private static DTE ide;
 
@@ -104,12 +105,13 @@ namespace DiscordRichPresenceForVisualStudio
                 ide = GetGlobalService(typeof(SDTE)) as DTE;
                 ide.Events.WindowEvents.WindowActivated += OnWindowActivated;
                 ide.Events.SolutionEvents.BeforeClosing += OnSolutionClosing;
+                ide.Events.WindowEvents.WindowClosing += OnWindowClosing;
 
                 string ideVersion = ide.Version.Split('.')[0];
                 versionName = $"Visual Studio {ConvertVersionToTitle(ideVersion)}";
                 versionImageKey = $"dev{ConvertVersionToTitle(ideVersion)}";
 
-                progress.Report(new ServiceProgressData("Initialization is in progress", "Loading exluded paths", 1, 3));
+                progress.Report(new ServiceProgressData("Initialization is in progress", "Loading excluded paths", 1, 3));
 
                 FileMatcher = new FilePatternMatcher();
                 var excludedPaths = ExtensionSettings.PathsBlacklist.Cast<string>();
@@ -164,12 +166,21 @@ namespace DiscordRichPresenceForVisualStudio
 
         private void OnSolutionClosing()
         {
+            closing = true;
+            UpdatePresence(null);
+        }
+
+        private void OnWindowClosing(Window window)
+        {
+            closing = true;
             UpdatePresence(null);
         }
 
         private void OnWindowActivated(Window GotFocus, Window LostFocus)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
+
+            if (closing) return;
 
             if (client == null)
             {
@@ -190,6 +201,7 @@ namespace DiscordRichPresenceForVisualStudio
 
         private void UpdatePresence(Document document, bool overrideTimestampReset = false)
         {
+            if (closing) return;
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();

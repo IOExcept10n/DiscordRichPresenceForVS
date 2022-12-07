@@ -89,11 +89,16 @@ namespace DiscordRichPresenceForVisualStudio.WindowsUI
         {
             _ = package.JoinableTaskFactory.RunAsync(async delegate
             {
+                await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
                 ToolWindowPane window = await package.ShowToolWindowAsync(typeof(SettingsWindow), 0, true, package.DisposalToken);
+                Guid def = Guid.Empty;
                 if ((window == null) || (window.Frame == null))
                 {
                     throw new NotSupportedException("Cannot create tool window");
                 }
+                IVsWindowFrame windowFrame = (IVsWindowFrame)window.Frame;
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(windowFrame.Show());
+                windowFrame.SetFramePos(VSSETFRAMEPOS.SFP_fSize, ref def, 5, 5, 256, 325);
             });
         }
     }
